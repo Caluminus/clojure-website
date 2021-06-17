@@ -1,4 +1,4 @@
-(ns yourname.hello-world-test
+(ns website.hello-world-test
   (:require
    [cljs.test :refer-macros [deftest is testing]]))
 
