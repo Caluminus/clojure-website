@@ -15,10 +15,10 @@
      {:name :homepage
       :view index-page
       :parameters {}}]
-    ["/posts"
-     {:name :tags
-      :view posts-page
-      :parameters {}}]
+    ;; ["/posts"
+    ;;  {:name :tags
+    ;;   :view posts-page
+    ;;   :parameters {}}]
     ["/posts/:path"
      {:name :posts
       :view posts-page
@@ -48,10 +48,10 @@
 
 ;; (defn prn-test-path [path] (println (clojure.core/format "'%s' maps to '%s'" path (-> (r/match-by-path router path) :template))))
 
-;; (prn "Start")
+(prn "Start")
 ;; (prn-test-path "/")
 ;; (prn "Index: " (-> (r/match-by-path router "/") :template))
 ;; (prn "Posts: " (-> (r/match-by-path router "/posts") :template))
 ;; (prn "PostsPath: " (-> (r/match-by-path router "/posts/hello") :template))
-;; (prn "End")
+(prn "End")
 
