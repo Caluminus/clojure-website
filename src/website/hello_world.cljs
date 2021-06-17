@@ -6,6 +6,8 @@
    [website.pages.posts :refer [posts-page]]
    [reagent.dom :as dom]
    [reitit.frontend.easy :as rfe]
+   [goog.string :as gstring]
+   [goog.string.format]
    [website.state :refer [state app-state]]))
 
 
@@ -46,12 +48,10 @@
 
 ;; (print (clojure.core/format "&.3f" 2))
 
-;; (defn prn-test-path [path] (println (clojure.core/format "'%s' maps to '%s'" path (-> (r/match-by-path router path) :template))))
+(defn prn-test-path [path] (println (gstring/format "'%s' maps to '%s'" path (-> (r/match-by-path router path) :template))))
 
 (prn "Start")
-;; (prn-test-path "/")
-;; (prn "Index: " (-> (r/match-by-path router "/") :template))
-;; (prn "Posts: " (-> (r/match-by-path router "/posts") :template))
-;; (prn "PostsPath: " (-> (r/match-by-path router "/posts/hello") :template))
+(prn-test-path "/")
+(prn-test-path "/posts")
+(prn-test-path "/posts/hello")
 (prn "End")
-
