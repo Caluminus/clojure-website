@@ -14,7 +14,7 @@ pom.xml
 
 .calva/
 .lsp/
-node-modules/
+node_modules/
 target/
 .cpcache/
 resources/public/cljs-out/
